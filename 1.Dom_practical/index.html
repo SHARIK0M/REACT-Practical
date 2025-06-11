@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DOM Practice</title>
+  <style>
+    .text {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="Hello">Sharik</h1>
+
+  <div class="sharik">This is a div with class 'sharik'</div>
+
+  <div name="info">Div with name attribute</div>
+
+  <div id="parent">
+    Parent
+    <div id="child">Child</div>
+  </div>
+
+  <button onclick="hi()">SELECT ELEMENT</button>
+  <button onclick="modifyDom()">MODIFY DOM</button>
+  <button onclick="traverseDom()">TRAVERSE DOM</button>
+  <button onclick="createMyElement()">CREATE ELEMENT</button>
+  <button onclick="removeMyElement()">REMOVE ELEMENT</button>
+
+  <button id="eventBtn">CLICK FOR ALERT</button>
+
+  <script>
+    // ✅ SELECT ELEMENTS
+    function hi() {
+      // ID
+      const byId = document.getElementById('Hello');
+      byId.innerText = "Hello Sharik (Modified)";
+
+      // Class
+      const byClass = document.getElementsByClassName('sharik');
+      console.log("By Class:", byClass[0].innerText);
+
+      // Tag Name
+      const byTag = document.getElementsByTagName('div');
+      console.log("By Tag Name:", byTag.length);
+
+      // Name
+      const byName = document.getElementsByName('info');
+      console.log("By Name:", byName[0].innerText);
+
+      // querySelector
+      const byQuery = document.querySelector('.sharik');
+      console.log("querySelector:", byQuery.innerText);
+
+      // querySelectorAll
+      const byQueryAll = document.querySelectorAll('div');
+      console.log("querySelectorAll Count:", byQueryAll.length);
+    }
+
+    // ✅ MODIFYING DOM
+    function modifyDom() {
+      const element = document.getElementById('Hello');
+
+      element.innerText = 'Sharik - Modified Text';
+      element.innerHTML = '<h3>Sharik in h3</h3>';
+      element.setAttribute('style', 'color: red; font-size: 24px;');
+      element.removeAttribute('style');
+
+      // Adding back styling via JS
+      element.style.color = 'green';
+      element.style.fontSize = '20px';
+    }
+
+    // ✅ TRAVERSING DOM
+    function traverseDom() {
+      const child = document.getElementById('child');
+
+      const parent = child.parentNode;
+      console.log("Parent Node:", parent.id); // 'parent'
+
+      const nextSibling = child.nextElementSibling;
+      console.log("Next Sibling:", nextSibling); // null
+
+      const prevSibling = child.previousElementSibling;
+      console.log("Previous Sibling:", prevSibling); // null
+
+      const children = parent.children;
+      console.log("Children of parent:", children.id);
+    }
+
+    // ✅ CREATE ELEMENT
+    function createMyElement() {
+      const newdiv = document.createElement('h1');
+      newdiv.innerText = 'New Element Added!';
+      newdiv.setAttribute('class', 'text');
+      document.body.appendChild(newdiv);
+    }
+
+    // ✅ REMOVE ELEMENT
+    function removeMyElement() {
+      const toRemove = document.querySelector('.text');
+      if (toRemove) toRemove.remove();
+    }
+
+    // ✅ HANDLING EVENTS
+    const btn = document.getElementById('eventBtn');
+    btn.addEventListener('click', () => {
+      alert('Button was clicked!');
+    });
+  </script>
+
+</body>
+</html>

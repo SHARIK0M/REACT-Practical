@@ -1,0 +1,43 @@
+/* User.css */
+
+.user-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 10px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.user-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.user-card {
+  background-color: #f0f4f8;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-card h3 {
+  margin: 5px 0;
+  color: #222;
+}
+
+.user-card button {
+  margin-top: 10px;
+  padding: 8px 14px;
+  background-color: #ff4d4f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user-card button:hover {
+  background-color: #d9363e;
+}
