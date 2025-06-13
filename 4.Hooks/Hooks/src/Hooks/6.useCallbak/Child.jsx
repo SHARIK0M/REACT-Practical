@@ -10,7 +10,7 @@ useEffect(()=>{
   setStatee(passValue(10))
 },[passValue])
 
-  return (
+  return ( 
     <div>
       <ul>
         {statee.map((Val,index)=>{

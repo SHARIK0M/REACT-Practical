@@ -1,19 +1,19 @@
-import React, { createContext } from 'react'
-import Prac from './components/Prac'
- export const Mycontex = createContext()
+// import React, { createContext } from 'react'
+// import Prac from './components/Prac'
+//  export const Mycontex = createContext()
 
-function App() {
-    let val = {name:'sharik'}
-  return (
-    <Mycontex.Provider value={val}>
-     <h1>Hello I'm Sharik</h1>
+// function App() {
+//     let val = {name:'sharik'}
+//   return (
+//     <Mycontex.Provider value={val}>
+//      <h1>Hello I'm Sharik</h1>
 
-    <Prac />
-    </Mycontex.Provider>
-  )
-}
+//     <Prac />
+//     </Mycontex.Provider>
+//   )
+// }
 
-export default App
+// export default App
 
 // --------------------------------------------------------------------------------------------------
 

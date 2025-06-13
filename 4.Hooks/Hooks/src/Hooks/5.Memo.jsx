@@ -40,19 +40,19 @@
 
 // / REACT MEMO 
 
-import React, { useState, memo } from 'react';
+// import React, { useState, memo } from 'react';
 
-const Child = React.memo(function Child({ name }) {
-  console.log("✅ Child component rendered");
-  return <h2>Hello, {name}</h2>;
-});
+// const Child = React.memo(function Child({ name }) {
+//   console.log("✅ Child component rendered");
+//   return <h2>Hello, {name}</h2>;
+// });
 
 
 
-const Childd = ({ name }) => {
-  console.log("✅ Child component rendered");
-  return <h2>Hello, {name}</h2>;
-};
+// const Childd = ({ name }) => {
+//   console.log("✅ Child component rendered");
+//   return <h2>Hello, {name}</h2>;
+// };
 // export  React.memo(Childd);
 
 
